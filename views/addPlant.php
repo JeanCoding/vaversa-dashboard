@@ -66,26 +66,19 @@
             <div class="flex mt-4">
                <img src="../images/Ellipse 5.png" class="w-16 h-fit relative right-2" alt="" />
                <div>
-                  <h1 class="text-black text-lg mt-1">Peterselie</h1>
-                  <h2 class="text-black text-sm text-gray-200">
-                     Upcoming: Giving Water
-                  </h2>
+                  <h1 class="text-black text-lg mt-3">Peterselie</h1>
                </div>
             </div>
             <div class="flex mt-4">
                <img src="../images/Ellipse 5.png" class="w-16 h-fit relative right-2" alt="" />
                <div>
-                  <h1 class="text-black text-lg mt-1">Dille</h1>
-                  <h2 class="text-black text-sm text-gray-200">
-                     Upcoming: Cut The Plant
-                  </h2>
+                  <h1 class="text-black text-lg mt-3">Dille</h1>
                </div>
             </div>
             <div class="flex mt-4">
                <img src="../images/Ellipse 9.png" class="w-16 h-fit relative right-2" alt="" />
                <div>
-                  <h1 class="text-black text-lg mt-1">Koriander</h1>
-                  <h2 class="text-black text-sm text-gray-200">Upcoming: New Seeds</h2>
+                  <h1 class="text-black text-lg mt-3">Koriander</h1>
                </div>
             </div>
          </div>
