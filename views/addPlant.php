@@ -84,7 +84,7 @@
          </div>
       </div>
       <div class="lg:justify-between lg:flex ">
-         <a class="block lg:hidden" href="index.php">
+         <a class="block lg:hidden" href="index_admin.php">
             <div style="border-radius: 20px;" class="bg-yellow-50 px-10 py-3 mx-8 mt-10 flex justify-center drop-shadow-lg lg:w-4/12">
                <h1 class="text-black text-lg mt-1">Go Back</h1>
             </div>
@@ -105,7 +105,7 @@
          </div>
          <!-- end of all Total Plants tab -->
          <!-- Mobile Go Back Button -->
-         <a class="mx-8 mt-10 w-1/3" href="index.php">
+         <a class="mx-8 mt-10 w-1/3" href="index_admin.php">
             <div style="border-radius: 20px;" class="bg-yellow-50 px-10 py-3 flex justify-center w-full h-fit hidden lg:flex hover:drop-shadow-xl drop-shadow-lg ease-in-out duration-300">
                <h1 class="text-black text-lg mt-1">Go Back</h1>
             </div>
