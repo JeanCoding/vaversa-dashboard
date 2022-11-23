@@ -35,7 +35,7 @@
             </div>
             <div class="flex flex-1 flex-col justify-center space-y-5 max-w-md">
                <div class="flex flex-col space-y-2 text-center mb-12">
-                  <h2 class="text-3xl md:text-4xl font-bold">Sign In To Your Account</h2>
+                  <h2 class="text-3xl md:text-4xl font-bold">VaVersa Sign In</h2>
                </div>
                <div class="flex flex-col max-w-md space-y-5">
                   <input type="text" placeholder="Username"
@@ -45,7 +45,7 @@
                      class="flex px-3 py-2 md:px-4 md:py-3 outline-none border-none bg-yellow-50 text-black rounded-lg font-medium placeholder:font-normal"
                      required />
                   <input type="submit" value="Submit"
-                     class="flex items-center justify-center flex-none px-3 py-2 md:px-4 md:py-3 border-2 rounded-lg font-medium border-yellow-50 bg-yellow-50 text-black z-20 hover:bg-gray-200">
+                     class="flex items-center justify-center flex-none px-3 py-2 md:px-4 md:py-3 border-2 rounded-lg font-medium text-black z-20 bg-gray-100 hover:bg-gray-200 ease-in-out duration-300 cursor-pointer">
                </div>
             </div>
          </div>
