@@ -15,7 +15,7 @@
             <div class="bg-yellow-50 py-2 px-8 rounded-full cursor-pointer">
                <img class="w-16" src="../images/vavarsa.png" alt="" />
             </div>
-            <button class="text-black text-xl bg-yellow-50 py-2 px-8 mr-14 rounded-full hidden lg:block">Log Out</button>
+            <a href="login.php" class="text-black text-xl bg-yellow-50 py-2 px-8 mr-14 rounded-full hidden lg:block">Log Out</a>
          </div>
       </nav>
       <!-- end of navbar -->
@@ -113,7 +113,7 @@
          </a>
       </div>
       <div class="flex justify-center lg:hidden">
-         <a data-aos="fade-left" href="inlog.php" style="border-radius: 20px;" class="bg-yellow-50 px-8 py-3 mx-8 mt-10 mb-24">
+         <a data-aos="fade-left" href="login.php" style="border-radius: 20px;" class="bg-yellow-50 px-8 py-3 mx-8 mt-10 mb-24">
          Log Out
          </a>
       </div>
