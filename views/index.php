@@ -15,7 +15,7 @@
             <div class="bg-yellow-50 py-2 px-8 rounded-full cursor-pointer">
                <img class="w-16" src="../images/vavarsa.png" alt="" />
             </div>
-            <a href="inlog.php" class="text-black text-xl bg-yellow-50 py-2 px-8 mr-14 rounded-full hidden lg:block">Log Out</a>
+            <a href="login.php" class="text-black text-xl bg-yellow-50 py-2 px-8 mr-14 rounded-full hidden lg:block">Log Out</a>
          </div>
       </nav>
       <!-- end of navbar -->
