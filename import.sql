@@ -1,7 +1,5 @@
 CREATE DATABASE vaversa;
 
-USE DATABASE vaversa;
-
 CREATE TABLE users (
     id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
     username varchar(20) NOT NULL,

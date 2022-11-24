@@ -45,7 +45,7 @@
                         <p class="pl-4 w-full h-10 bg-gray-100 rounded-lg pt-2">
                            <script> document.write(new Date().toLocaleDateString()); </script>
                         </p>
-                        <input class="h-10 rounded-lg border-2 border-none bg-pink-300 px-12 block mt-6 text-white hover:bg-pink-400 ease-in-out duration-300" type="submit" name="submit"></input>
+                        <input class="h-10 rounded-lg border-2 border-none bg-pink-300 px-12 block mt-6 text-white hover:bg-pink-400 ease-in-out duration-300" type="submit" name="submit" value="Submit "></input>
                      </form>
                   </div>
                </div>
@@ -98,8 +98,8 @@
                <div>
                   <h1 class="text-black text-lg mt-3">Koriander</h1>
                </div>
-            </div>
-         </div> -->
+            </div> -->
+         </div>
       </div>
       <div class="lg:justify-between lg:flex ">
          <a class="block lg:hidden" href="index_admin.php">
@@ -162,7 +162,6 @@ if (isset($_POST["submit"])) {
    $name =  $_POST["name"];
    $date = date("m/d/Y");
    $pdo->query("INSERT INTO `plants`(`id`, `plant_name`, `task`, `name`, `plant_date`) VALUES ('0','$plant_name','$task','$name','$date')");
-   header('location: index_admin.php');
 }
 
 
