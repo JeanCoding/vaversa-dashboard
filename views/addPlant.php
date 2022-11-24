@@ -1,3 +1,4 @@
+<?php include "connect.php" ?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -24,26 +25,26 @@
             <div style="border-radius: 20px;" class="bg-yellow-50 px-10 py-6 mx-8 mt-20 lg:w-full lg:ml-28 drop-shadow-lg">
                <div class="flex justify-between">
                   <div>
-                     <form>
+                     <form method="POST">
                         <h1 class="text-black text-2xl mb-2 ml-2">Add a <span class="text-pink-300">Plant</span></h1>
-                        <input class="w-full h-10 rounded-lg border-2 border-gray-50 outline-none bg-gray-100 pl-4 mt-2" type="text" placeholder="Plant Name" />
+                        <input class="w-full h-10 rounded-lg border-2 border-gray-50 outline-none bg-gray-100 pl-4 mt-2" type="text" placeholder="Plant Name" name="plant_name"/>
                         <h1 class="text-black text-xl mb-2 mt-4 ml-2">Add a <span class="text-pink-300">Task</span></h1>
-                        <select class="w-full h-10 rounded-lg border-2 border-gray-50 outline-none bg-gray-100 pl-4 mt-2">
-                           <option value="volvo">Give Water</option>
-                           <option value="saab">Cut The Plant</option>
-                           <option value="mercedes">Remove The Box</option>
+                        <select class="w-full h-10 rounded-lg border-2 border-gray-50 outline-none bg-gray-100 pl-4 mt-2" name="task">
+                           <option value="Give water">Give Water</option>
+                           <option value="Cut plant">Cut The Plant</option>
+                           <option value="Remove box">Remove The Box</option>
                         </select>
                         <h1 class="text-black text-xl mb-2 mt-4 ml-2">Add to a <span class="text-pink-300">User</span></h1>
-                        <select class="w-full h-10 rounded-lg border-2 border-gray-50 outline-none bg-gray-100 pl-4 mt-2">
-                           <option value="volvo">Jean</option>
-                           <option value="saab">Nathan</option>
-                           <option value="mercedes">Bilal</option>
+                        <select class="w-full h-10 rounded-lg border-2 border-gray-50 outline-none bg-gray-100 pl-4 mt-2" name="name">
+                           <option value="Jean">Jean</option>
+                           <option value="Nathan">Nathan</option>
+                           <option value="Bilal">Bilal</option>
                         </select>
                         <h1 class="text-black text-xl mb-2 mt-4 ml-2">Current  <span class="text-pink-300">Date</span></h1>
                         <p class="pl-4 w-full h-10 bg-gray-100 rounded-lg pt-2">
                            <script> document.write(new Date().toLocaleDateString()); </script>
                         </p>
-                        <button class="h-10 rounded-lg border-2 border-none bg-pink-300 px-12 block mt-6 text-white hover:bg-pink-400 ease-in-out duration-300">Submit</button>
+                        <input class="h-10 rounded-lg border-2 border-none bg-pink-300 px-12 block mt-6 text-white hover:bg-pink-400 ease-in-out duration-300" type="submit" name="submit"></input>
                      </form>
                   </div>
                </div>
@@ -63,7 +64,23 @@
                   All <span class="text-pink-300">Plants</span>
                </h1>
             </div>
-            <div class="flex mt-4">
+            <?php
+            
+            $resultaat = $pdo->query("SELECT * FROM `plants` WHERE 1;");
+
+            while ($rowTijd = $resultaat->fetch()) {
+               if (!empty($rowTijd['plant_name'])) {
+                  ?><div class="flex mt-4">
+                        <img src="../images/Ellipse 5.png" class="w-16 h-fit relative right-2" alt="" />
+                        <div>
+                           <h1 class="text-black text-lg mt-1"><?= $rowTijd['plant_name'] ?></h1>
+                           <h2 class="text-black text-sm text-gray-200"><?= $rowTijd['task'] ?></h2>
+                        </div>   
+               </div><?php
+               }
+            }
+            ?>
+            <!-- <div class="flex mt-4">
                <img src="../images/Ellipse 5.png" class="w-16 h-fit relative right-2" alt="" />
                <div>
                   <h1 class="text-black text-lg mt-1">Peterselie</h1>
@@ -88,7 +105,7 @@
                   <h2 class="text-black text-sm text-gray-200">Upcoming: New Seeds</h2>
                </div>
             </div>
-         </div>
+         </div> -->
       </div>
       <div class="lg:justify-between lg:flex ">
          <a class="block lg:hidden" href="index.php">
@@ -138,3 +155,17 @@
    background: linear-gradient(122.22deg, #fbfacd 0.49%, #debace 76.69%);
    }
 </style>
+<?php
+
+if (isset($_POST["submit"])) {
+   $plant_name = $_POST["plant_name"];
+   $task = $_POST["task"];
+   $name =  $_POST["name"];
+   $date = date("m/d/Y");
+   $pdo->query("INSERT INTO `plants`(`id`, `plant_name`, `task`, `name`, `plant_date`) VALUES ('0','$plant_name','$task','$name','$date')");
+   header('location: index_admin.php');
+}
+
+
+
+?>

@@ -1,3 +1,4 @@
+<?php include "connect.php" ?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -37,13 +38,22 @@
                      Next <span class="text-pink-300">Task</span>
                   </h1>
                </div>
-               <div class="flex mt-4">
-                  <img src="../images/Ellipse2.png" class="w-16 h-fit relative right-2" alt="" />
-                  <div>
-                     <h1 class="text-black text-lg mt-1">Cut the basillicum</h1>
-                     <h2 class="text-black text-md text-gray-200">28-11-2022</h2>
-                  </div>
-               </div>
+               <?php
+            
+            $resultaat = $pdo->query("SELECT * FROM `plants` WHERE id=1");
+
+            while ($rowTijd = $resultaat->fetch()) {
+               if (!empty($rowTijd['plant_name'])) {
+                  ?><div class="flex mt-4">
+                        <img src="../images/Ellipse 5.png" class="w-16 h-fit relative right-2" alt="" />
+                        <div>
+                           <h1 class="text-black text-lg mt-1"><?= $rowTijd['plant_name'] ?></h1>
+                           <h2 class="text-black text-sm text-gray-200"><?= $rowTijd['plant_date'] ?></h2>
+                        </div>   
+               </div><?php
+               }
+            }
+            ?>
             </div>
          </div>
          <img class="w-80 h-fit mr-24 mt-16 hidden lg:block" src="../images/fotomia.png" alt="" />
@@ -61,16 +71,22 @@
                   My <span class="text-pink-300">Plants</span>
                </h1>
             </div>
-            <div class="flex mt-4">
-               <img src="../images/Ellipse 5.png" class="w-16 h-fit relative right-2" alt="" />
-               <div>
-                  <h1 class="text-black text-lg mt-1">Peterselie</h1>
-                  <h2 class="text-black text-sm text-gray-200">
-                     Upcoming: Giving Water
-                  </h2>
-               </div>
-            </div>
-            <div class="flex mt-4">
+            <?php
+
+            $resultaat = $pdo->query("SELECT * FROM `plants`");
+            while ($rowTijd = $resultaat->fetch()) {
+                  if (!empty($rowTijd['plant_name'])) {
+                     ?><div class="flex mt-4">
+                        <img src="../images/Ellipse 5.png" class="w-16 h-fit relative right-2" alt="" />
+                        <div>
+                           <h1 class="text-black text-lg mt-1"><?= $rowTijd['plant_name'] ?></h1>
+                           <h2 class="text-black text-sm text-gray-200"><?= $rowTijd['task'] ?></h2>
+                        </div>   
+                     </div><?php
+               }
+            }
+            ?>
+            <!-- <div class="flex mt-4">
                <img src="../images/Ellipse 5.png" class="w-16 h-fit relative right-2" alt="" />
                <div>
                   <h1 class="text-black text-lg mt-1">Dille</h1>
@@ -85,7 +101,7 @@
                   <h1 class="text-black text-lg mt-1">Koriander</h1>
                   <h2 class="text-black text-sm text-gray-200">Upcoming: New Seeds</h2>
                </div>
-            </div>
+            </div> -->
          </div>
       </div>
       <div class="lg:justify-between lg:flex">

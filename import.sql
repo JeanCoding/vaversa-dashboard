@@ -10,9 +10,10 @@ CREATE TABLE users (
 
 CREATE TABLE plants (
     id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    plant_name varchar(30) NOT NULL,
+    task varchar(30),
     name varchar(30) NOT NULL,
-    description text,
-    identifier int
+    plant_date varchar(30)
 );
 
 CREATE TABLE refills (
