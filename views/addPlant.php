@@ -92,7 +92,7 @@
          </a>
          <!-- start of Total Plants tab -->
          <div style="border-radius: 20px;" class="bg-yellow-50 px-10 py-6 mx-8 mt-10 lg:ml-24 lg:w-4/12 lg:mt-24 lg:mb-24 relative">
-            <img style="z-index: -10; top: -30px" class="absolute right-20 mt-12 mr-12 " src="../images/pngtree2.png" alt=""/>
+            <img style="z-index: -10; top: -30px" class="absolute right-20 mt-12 mr-12 lg:block hidden" src="../images/pngtree2.png" alt=""/>
             <div>
                <h1 class="text-black text-2xl mb-2 flex justify-center">
                   Total <span class="text-pink-300">Plants</span>
@@ -112,8 +112,8 @@
             </div>
          </a>
       </div>
-      <div data-aos="fade-left" class="flex justify-center lg:hidden">
-         <a href="inlog.php" style="border-radius: 20px;" class="bg-yellow-50 px-8 py-3 mx-8 mt-10 mb-24">
+      <div class="flex justify-center lg:hidden">
+         <a data-aos="fade-left" href="inlog.php" style="border-radius: 20px;" class="bg-yellow-50 px-8 py-3 mx-8 mt-10 mb-24">
          Log Out
          </a>
       </div>
