@@ -6,6 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>VaVersa | Add A Plant</title>
       <script src="https://cdn.tailwindcss.com"></script>
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
    </head>
    <body class="overflow-x-hidden">
       <!-- start of the navbar -->
@@ -43,7 +44,7 @@
                         <p class="pl-4 w-full h-10 bg-gray-100 rounded-lg pt-2">
                            <script> document.write(new Date().toLocaleDateString()); </script>
                         </p>
-                        <button class="h-10 rounded-lg border-2 border-none bg-pink-300 px-12 block mt-6 text-white hover:bg-pink-400 ease-in-out duration-300">Submit</button>
+                        <a href="index_admin.php"><button class="h-10 rounded-lg border-2 border-none bg-pink-300 px-12 block mt-6 text-white hover:bg-pink-400 ease-in-out duration-300">Submit</button></a>
                      </form>
                   </div>
                </div>
@@ -85,20 +86,20 @@
       </div>
       <div class="lg:justify-between lg:flex ">
          <a class="block lg:hidden" href="index_admin.php">
-            <div style="border-radius: 20px;" class="bg-yellow-50 px-10 py-3 mx-8 mt-10 flex justify-center drop-shadow-lg lg:w-4/12">
+            <div data-aos="fade-right" style="border-radius: 20px;" class="bg-yellow-50 px-10 py-3 mx-8 mt-10 flex justify-center drop-shadow-lg lg:w-4/12">
                <h1 class="text-black text-lg mt-1">Go Back</h1>
             </div>
          </a>
          <!-- start of Total Plants tab -->
          <div style="border-radius: 20px;" class="bg-yellow-50 px-10 py-6 mx-8 mt-10 lg:ml-24 lg:w-4/12 lg:mt-24 lg:mb-24 relative">
-            <img style="z-index: -10; top: -30px" class="absolute right-20 mt-12 mr-12 hidden lg:block" src="../images/pngtree2.png" alt=""/>
+            <img style="z-index: -10; top: -30px" class="absolute right-20 mt-12 mr-12 " src="../images/pngtree2.png" alt=""/>
             <div>
                <h1 class="text-black text-2xl mb-2 flex justify-center">
                   Total <span class="text-pink-300">Plants</span>
                </h1>
             </div>
             <div class="flex mt-4 justify-center">
-               <div>
+               <div data-aos="fade-right">
                   <h1 class="text-black text-6xl mt-4 mb-12">36</h1>
                </div>
             </div>
@@ -106,20 +107,24 @@
          <!-- end of all Total Plants tab -->
          <!-- Mobile Go Back Button -->
          <a class="mx-8 mt-10 w-1/3" href="index_admin.php">
-            <div style="border-radius: 20px;" class="bg-yellow-50 px-10 py-3 flex justify-center w-full h-fit hidden lg:flex hover:drop-shadow-xl drop-shadow-lg ease-in-out duration-300">
+            <div data-aos="fade-left" style="border-radius: 20px;" class="bg-yellow-50 px-10 py-3 flex justify-center w-full h-fit hidden lg:flex hover:drop-shadow-xl drop-shadow-lg ease-in-out duration-300">
                <h1 class="text-black text-lg mt-1">Go Back</h1>
             </div>
          </a>
       </div>
-      <div class="flex justify-center lg:hidden">
-         <button style="border-radius: 20px;" class="bg-yellow-50 px-8 py-3 mx-8 mt-10 mb-24">
+      <div data-aos="fade-left" class="flex justify-center lg:hidden">
+         <a href="inlog.php" style="border-radius: 20px;" class="bg-yellow-50 px-8 py-3 mx-8 mt-10 mb-24">
          Log Out
-         </button>
+         </a>
       </div>
       <div>
          <img class="hidden lg:block" src="../images/Rectangle 1.png" alt="">
       </div>
    </body>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>
+      AOS.init();
+    </script>
 </html>
 <style>
    @font-face {

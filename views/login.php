@@ -14,8 +14,7 @@
       <div class="flex flex-row w-full">
          <div class='hidden lg:flex flex-col justify-between mr-96 lg:p-8 xl:p-12 lg:max-w-sm xl:max-w-lg'>
             <div class="flex items-center justify-start space-x-3">
-
-               <a href="#" class="font-medium text-xl">VaVersa</a>
+               <a href="index_admin.php" class="font-medium text-xl">ARE U A ADMIN? <span class="text-pink-300">CLICK</span></a>
             </div>
             <div class='space-y-5'>
                <h1 class="lg:text-3xl xl:text-5xl xl:leading-snug font-extrabold">VaVersa Dashboard</h1>
@@ -45,8 +44,9 @@
                   <input type="password" placeholder="Password"
                      class="flex px-3 py-2 md:px-4 md:py-3 outline-none border-none bg-yellow-50 text-black rounded-lg font-medium placeholder:font-normal drop-shadow-lg"
                      required />
-                  <input type="submit" value="Submit"
-                     class="flex items-center justify-center flex-none px-3 py-2 md:px-4 md:py-3 border-none rounded-lg font-medium text-black z-20 bg-yellow-50 hover:drop-shadow-lg drop-shadow-md ease-in-out duration-300 cursor-pointer">
+                  <a href="index.php" class="flex items-center justify-center flex-none px-3 py-2 md:px-4 md:py-3 border-none rounded-lg font-medium text-black z-20 bg-yellow-50 hover:drop-shadow-lg drop-shadow-md ease-in-out duration-300 cursor-pointer">
+                     Submit
+                  </a>
                   </form>
                </div>
             </div>
