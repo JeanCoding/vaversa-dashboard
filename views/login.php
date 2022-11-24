@@ -12,9 +12,9 @@
 <body class="bg-white">
    <div class="flex min-h-screen">
       <div class="flex flex-row w-full">
-         <div class='hidden lg:flex flex-col justify-between mr-96 lg:p-8 xl:p-12 lg:max-w-sm xl:max-w-lg'>
+         <div class='hidden lg:flex flex-col justify-between mr-96 lg:py-4 xl:px-12 lg:max-w-sm xl:max-w-lg'>
             <div class="flex items-center justify-start space-x-3">
-               <a href="index_admin.php" class="font-medium text-xl">ARE U A ADMIN? <span class="text-pink-300">CLICK</span></a>
+               <a href="index_admin.php" class="font-medium text-lg absolute bottom-8 left-14">ARE U A ADMIN? <span class="text-pink-300">CLICK</span></a>
             </div>
             <div class='space-y-5'>
                <h1 class="lg:text-3xl xl:text-5xl xl:leading-snug font-extrabold">VaVersa Dashboard</h1>
@@ -47,6 +47,9 @@
                   <a href="index.php" class="flex items-center justify-center flex-none px-3 py-2 md:px-4 md:py-3 border-none rounded-lg font-medium text-black z-20 bg-yellow-50 hover:drop-shadow-lg drop-shadow-md ease-in-out duration-300 cursor-pointer">
                      Submit
                   </a>
+                  <div class="flex justify-center">
+                     <a href="index_admin.php" class="font-medium text-lg absolute bottom-4 lg:hidden">ARE U A ADMIN? <span class="text-yellow-50">CLICK</span></a>
+                  </div>
                   </form>
                </div>
             </div>
