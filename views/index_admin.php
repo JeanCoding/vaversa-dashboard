@@ -61,23 +61,7 @@
                   All <span class="text-pink-300">Plants</span>
                </h1>
             </div>
-            <?php
-            
-            $resultaat = $pdo->query("SELECT * FROM `plants` WHERE 1;");
-
-            while ($rowTijd = $resultaat->fetch()) {
-               if (!empty($rowTijd['plant_name'])) {
-                  ?><div class="flex mt-4">
-                        <img src="../images/Ellipse 5.png" class="w-16 h-fit relative right-2" alt="" />
-                        <div>
-                           <h1 class="text-black text-lg mt-1"><?= $rowTijd['plant_name'] ?></h1>
-                           <h2 class="text-black text-sm text-gray-200"><?= $rowTijd['task'] ?></h2>
-                        </div>   
-               </div><?php
-               }
-            }
-            ?>
-            <!-- <div class="flex mt-4">
+            <div class="flex mt-4">
                <img src="../images/Ellipse 5.png" class="w-16 h-fit relative right-2" alt="" />
                <div>
                   <h1 class="text-black text-lg mt-3">Peterselie</h1>
@@ -94,7 +78,7 @@
                <div>
                   <h1 class="text-black text-lg mt-3">Koriander</h1>
                </div>
-            </div> -->
+            </div>
          </div>
       </div>
       <div class="lg:justify-between lg:flex">
