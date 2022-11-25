@@ -20,6 +20,8 @@ A dashboard build to notify people who own a VaVersa sustainable garden when the
 
 - Install [Xamp](https://www.apachefriends.org/)
 
+- Open Xamp and click on start at Apache and MySQL
+
 -  Open this folder location ``C:\xampp\htdocs\``
 
 - Download the repository ( Click on code button )
